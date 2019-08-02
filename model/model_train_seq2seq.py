@@ -10,9 +10,6 @@ from io import open
 import torch
 import numpy as np
 from torch import nn, optim
-import matplotlib; matplotlib.use('agg')
-import matplotlib.pyplot as plt
-import matplotlib.ticker as ticker
 from nltk.translate.bleu_score import sentence_bleu
 from tqdm import tqdm
 

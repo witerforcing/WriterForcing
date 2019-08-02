@@ -8,9 +8,7 @@ from torch import optim
 from torch.utils import data
 import torch.nn.functional as F
 from torch import nn, optim
-from tensorboardX import SummaryWriter
 from time import gmtime, strftime
-from sklearn.metrics import confusion_matrix
 import matplotlib
 from tqdm import tqdm
 

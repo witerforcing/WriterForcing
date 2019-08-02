@@ -12,22 +12,8 @@ import string
 import re
 import random
 from torch import optim
-import matplotlib.pyplot as plt
-import matplotlib.ticker as ticker
-
-from torchtext.datasets import TranslationDataset, Multi30k
-from torchtext.data import Field, BucketIterator
-# from Attention.seq2seqmodules import Decoder
-# from Attention.seq2seqmodules import Attention
-# from Seq2Seq.Encoder import Encoder
-# from Seq2Seq.AttentionDecoder import Decoder
-#from Seq2Seq.AttentionDecoderLuong import Decoder
-
 from Seq2Seq.Encoder_multi_layer import Encoder
 from Seq2Seq.AttentionDecoder_key_multi_layer import Decoder
-# from Seq2Seq.AttentionDecoderLuong_multi_layer import Decoder
-
-
 
 
 class Story_model(nn.Module):

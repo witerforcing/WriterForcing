@@ -9,8 +9,6 @@ import torch
 import torch.nn.functional as F
 from torch.utils import data
 from torch import optim
-import matplotlib.pyplot as plt
-import matplotlib.ticker as ticker
 
 class Encoder(nn.Module):
     def __init__(self,

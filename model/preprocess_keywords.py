@@ -14,7 +14,6 @@ UNK_ID = 0
 PAD_ID = 1
 SOS_ID = 2
 EOS_ID = 3
-# _START_VOCAB = [ '<unk>', '<pad>', '<sos>', '<eos>', '_NAF_H', '_NAF_R', '_NAF_T']
 _START_VOCAB = [ '<unk>', '<pad>', '<sos>', '<eos>']
 r = Rake()
 
