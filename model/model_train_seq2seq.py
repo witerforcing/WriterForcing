@@ -53,7 +53,7 @@ def evaluate(epoch, model, iterator, criterion, data, adaptive_softmax = None):
 
     return epoch_loss / len(iterator)
 
-def test(args,epoch, model, iterator, data):
+def test(args, epoch, model, iterator, data):   
     model.eval()
     dir_path = args.keyword_attention + "_" + str(args.itf_loss) + "/"
 
@@ -275,7 +275,7 @@ def trainIters(args, model, data):
     for epoch in range(args.epoch):
 
         train_loss = train(model, train_iterator, optimizer, criterion, args.norm, kl_criterion, adaptive_softmax=args.adaptivesoftmax, keyword_attention = args.keyword_attention)
-        test(args,epoch, model, test_iterator, data, adaptive_softmax=args.adaptivesoftmax)
+        test(args,epoch, model, test_iterator, data)
         valid_loss = evaluate(epoch, model, valid_iterator, criterion, data, adaptive_softmax=args.adaptivesoftmax)
         print(f'\tTrain Loss: {train_loss:.3f} | Train PPL: {math.exp(train_loss):7.3f}')
         print(f'\t Val. Loss: {valid_loss:.3f} |  Val. PPL: {math.exp(valid_loss):7.3f}')
