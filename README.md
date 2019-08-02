@@ -1,6 +1,9 @@
 # WriterForcing: Generating more interesting story endings
 
-Note
+This repository has code for the published work at ACL Storytelling worksop 2019.
+Please cite this paper if you use any part of this code : https://www.aclweb.org/anthology/W19-3413
+
+Note:
 You need to have a GPU (and CUDA) to exucute the code. 
 
 # Setup instructions
@@ -49,7 +52,21 @@ python -m model.model_train_seq2seq --keyword_attention context_add
 python -m model.model_train_seq2seq --keyword_attention att_sum_coverage
 ```
 
+## Story cloze evaluation
+As mentioned in the paper we have used BERT for story cloze evaluation. The model can be downloaded [here](https://drive.google.com/open?id=12ArE22n0Fizh9DFZfeCIoqXbnxkAVMWd) and must be placed outside the git repo.
+
+To install BERT follow the instructions in this [repo](https://github.com/huggingface/pytorch-transformers): 
+After training your model with flag```--keyword_attention att_sum_mse_True```  the outputs would be written to ```att_sum_mse_True```, then run the evalutation script as follows
+
+```
+cd evaluate_attributes
+python evaluate_story_cloze.py --model1 outputs/ie.txt --model2 ../att_sum_mse_True/../att_sum_mse_True/keyadd_outputs_storys_
+```
+
 ## Distinct Metric :
 ```
 python calculate_metrics.py --file output_file_name_here.txt
 ``` 
+
+## Best Outputs
+The best output of all the models compared in the paper are present in the ```outputs``` folder
