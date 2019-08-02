@@ -9,15 +9,7 @@ from torch.utils import data
 import torch.nn.functional as F
 from torch import nn, optim
 from time import gmtime, strftime
-import matplotlib
 from tqdm import tqdm
-
-
-matplotlib.use('agg')
-import matplotlib.pyplot as plt
-import matplotlib.ticker as ticker
-
-
 from io import open
 import unicodedata
 import string

@@ -145,12 +145,12 @@ class ROCstories_data:
 
     def load_data(self, path, fname):
         post = []
-        with open('%s/%s.post' % (path, fname)) as f:
+        with open('%s/%s.post' % (path, fname), encoding="utf8") as f:
             for line in f:
                 tmp = [" ".join(line.strip().split("\t"))]#line.strip().split("\t")
                 post.append([p.split() for p in tmp])
 
-        with open('%s/%s.response' % (path, fname)) as f:
+        with open('%s/%s.response' % (path, fname), encoding="utf8") as f:
             response = [line.strip().split() for line in f.readlines()]
         data = []
         for p, r in zip(post, response):
@@ -226,7 +226,7 @@ class ROCstories_data:
 
         print("Loading word vectors...")
         vectors = {}
-        with open(path + '/glove.6B.200d.txt', 'r') as f:
+        with open(path + '/glove.6B.200d.txt', 'r', encoding="utf8") as f:
             for i, line in enumerate(f):
                 if i % 100000 == 0:
                     print("    processing line %d" % i)
