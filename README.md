@@ -1,6 +1,6 @@
 # WriterForcing: Generating more interesting story endings
 
-This repository has code for the published work at ACL Storytelling worksop 2019.
+This repository has code for the published work at ACL Storytelling workshop 2019.
 Please cite this paper if you use any part of this code : https://www.aclweb.org/anthology/W19-3413
 
 Note:
