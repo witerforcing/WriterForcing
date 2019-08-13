@@ -65,6 +65,7 @@ python evaluate_story_cloze.py --model1 outputs/ie.txt --model2 ../att_sum_mse_T
 
 ## Distinct Metric :
 ```
+cd outputs
 python calculate_metrics.py --file output_file_name_here.txt
 ``` 
 
